@@ -10,7 +10,7 @@ services:
       - weedly-backend
 
   weedly-backend:
-    image: kbondar17/weedly-backend
+    image: kbondar17/weedly-back
     env_file:
       - .env
     ports:
