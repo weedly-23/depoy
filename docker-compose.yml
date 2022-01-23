@@ -19,7 +19,7 @@ services:
       - weedly-backend
 
   weedly-parser:
-    image: kbondar17/weedly-parser
+    image: kbondar17/rss-parser
     env_file:
       - .env
     ports:
