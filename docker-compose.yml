@@ -18,5 +18,14 @@ services:
     networks:
       - weedly-backend
 
+  weedly-parser:
+    image: kbondar17/weedly-parser
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+    networks:
+      - weedly-backend
+
 networks:
   weedly-backend: null
