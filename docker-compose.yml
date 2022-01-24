@@ -20,6 +20,7 @@ services:
 
   weedly-parser:
     image: kbondar17/rss-parser
+    restart: always
     env_file:
       - .env
     networks:
