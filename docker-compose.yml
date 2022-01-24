@@ -10,7 +10,7 @@ services:
       - weedly-backend
 
   weedly-backend:
-    image: ghcr.io/weedly-23/backend:main
+    image: ghcr.io/weedly-23/backend:v1.0.4
     env_file:
       - .env
     ports:
@@ -19,7 +19,15 @@ services:
       - weedly-backend
 
   weedly-parser:
-    image: kbondar17/rss-parser
+    image: ghcr.io/weedly-23/rss-parsers:main
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - weedly-backend
+
+  weedly-bot:
+    image: ghcr.io/weedly-23/weedly-tg-bot:v1.0.1
     restart: always
     env_file:
       - .env
