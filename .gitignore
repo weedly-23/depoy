@@ -6,7 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+
+.vscode
 # Distribution / packaging
+temp.py
 .Python
 build/
 develop-eggs/
